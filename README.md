@@ -1,2 +1,2 @@
-# RepurposeGANs
-Website for Repurposing GANs for One-shot Semantic Part Segmentation
+# Zero-guidance Segmentation Using Zero Segment Labels
+Website for Zero-guidance Segmentation Using Zero Segment Labels
