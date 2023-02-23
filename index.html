@@ -178,7 +178,7 @@
       <div class="hero-body">
         <div class="container" style="max-width: 800px" >
           <h1 style="">Abstract</h1>
-          <p  style="text-align: justify; font-size: 17px;">
+          <p  style="text-align: justify; font-size: 17px;margin-bottom:3cm;">
             CLIP has enabled new and exciting joint vision-language applications, one of which is open-vocabulary 
             segmentation, which can locate any segment given an arbitrary text query. Our paper asks the next question: 
             can we discover semantic segments without user guidance in the form of text queries or predefined classes 
@@ -191,8 +191,6 @@
             Our main contribution is a novel attention-masking technique that balances the two contexts by analyzing the 
             attention layers inside CLIP. We also introduce several metrics for the evaluation of this new task. With 
             CLIP’s innate knowledge, our method can precisely locate the Mona Lisa painting among a museum crowd.
-            
-            
           </p>
         </div>
       </div>
@@ -201,10 +199,10 @@
         <img src="assets/images/pipeline.png" width="850px" height="850px">
         <div class="head_cap">
             <p style="color:gray;font-size: 14px;">
-            <b>Pipeline Overview</b> Our method first segments an input image by clustering learned per-pixel features extracted 
-              from DINO. The input image is then fed into CLIP’s image encoder. In this step, the produced segmentation masks are 
-              used to modify CLIP’s attention to provide embeddings that are more focused to each segment. The resulting  
-              embeddings are then used to optimize a trained language model to generate texts closest to these embeddings. Lastly, 
+            <b>Pipeline Overview</b> Our method first segments an input image by clustering learned per-pixel features extracted  <br> 
+              from DINO. The input image is then fed into CLIP’s image encoder. In this step, the produced segmentation masks are  <br> 
+              used to modify CLIP’s attention to provide embeddings that are more focused to each segment. The resulting  <br>  
+              embeddings are then used to optimize a trained language model to generate texts closest to these embeddings. Lastly,  <br> 
               segments with similar embeddings and text outputs are merged together to form more coherent segmentation results.
             </p>
         </div>
