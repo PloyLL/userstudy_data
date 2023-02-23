@@ -178,7 +178,7 @@
       <div class="hero-body">
         <div class="container" style="max-width: 800px" >
           <h1 style="">Abstract</h1>
-          <p  style="text-align: justify; font-size: 17px;margin-bottom:3cm;">
+          <p  style="text-align: justify; font-size: 17px;margin-bottom:2cm;">
             CLIP has enabled new and exciting joint vision-language applications, one of which is open-vocabulary 
             segmentation, which can locate any segment given an arbitrary text query. Our paper asks the next question: 
             can we discover semantic segments without user guidance in the form of text queries or predefined classes 
@@ -195,17 +195,22 @@
         </div>
       </div>
     </section>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" style="max-width: 800px" >
+          <h1 style="">Our Pipeline</h1>
+          <p  style="text-align: justify; font-size: 17px;margin-bottom:0.5cm;">
+            Our method first segments an input image by clustering learned per-pixel features extracted from DINO. The 
+            input image is then fed into CLIP’s image encoder. In this step, the produced segmentation masks are used to 
+            modify CLIP’s attention to provide embeddings that are more focused to each segment. The resulting embeddings 
+            are then used to optimize a trained language model to generate texts closest to these embeddings. Lastly, 
+            segments with similar embeddings and text outputs are merged together to form more coherent segmentation results.
+          </p>
+        </div>
+      </div>
+    </section>
     <center>
         <img src="assets/images/pipeline.png" width="850px" height="850px">
-        <div class="head_cap">
-            <p style="color:gray;font-size: 14px;">
-            <b>Pipeline Overview</b> Our method first segments an input image by clustering learned per-pixel features extracted  <br> 
-              from DINO. The input image is then fed into CLIP’s image encoder. In this step, the produced segmentation masks are  <br> 
-              used to modify CLIP’s attention to provide embeddings that are more focused to each segment. The resulting  <br>  
-              embeddings are then used to optimize a trained language model to generate texts closest to these embeddings. Lastly,  <br> 
-              segments with similar embeddings and text outputs are merged together to form more coherent segmentation results.
-            </p>
-        </div>
       </center>
     <section class="hero is-light" style="">
       <div class="hero-body">
