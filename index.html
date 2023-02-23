@@ -191,26 +191,21 @@
             Our main contribution is a novel attention-masking technique that balances the two contexts by analyzing the 
             attention layers inside CLIP. We also introduce several metrics for the evaluation of this new task. With 
             CLIP’s innate knowledge, our method can precisely locate the Mona Lisa painting among a museum crowd.
-<!--             While GANs have shown success in realistic image generation, the idea of using GANs for other tasks 
-            unrelated to synthesis is underexplored. Do GANs learn meaningful structural parts of objects during 
-            their attempt to reproduce those objects? In this work, we test this hypothesis and propose a simple 
-            and effective approach based on GANs for semantic part segmentation that requires as few as one label 
-            example along with an unlabeled dataset. Our key idea is to leverage a trained GAN to extract pixel-wise 
-            representation from the input image and use it as feature vectors for a segmentation network. Our experiments 
-            demonstrate that GANs representation is "readily discriminative" and produces surprisingly good results 
-            that are comparable to those from supervised baselines trained with significantly more labels. We believe 
-            this novel repurposing of GANs underlies a new class of unsupervised representation learning that is applicable 
-            to many other tasks. -->
+            
+            
           </p>
         </div>
       </div>
     </section>
     <center>
-        <img src="assets/images/pipeline.png" width="1000px" height="1000px">
+        <img src="assets/images/pipeline.png" width="850px" height="850px">
         <div class="head_cap">
             <p style="color:gray;font-size: 14px;">
-            <b>Zero-guidance Segmentation</b> segments input images and generated text labels for all segments without any guidance or prompting. <br> 
-            Our method produces these results using only pretrained networks with no fine-tuning or annotations 
+            <b>Pipeline Overview</b> Our method first segments an input image by clustering learned per-pixel features extracted 
+              from DINO. The input image is then fed into CLIP’s image encoder. In this step, the produced segmentation masks are 
+              used to modify CLIP’s attention to provide embeddings that are more focused to each segment. The resulting  
+              embeddings are then used to optimize a trained language model to generate texts closest to these embeddings. Lastly, 
+              segments with similar embeddings and text outputs are merged together to form more coherent segmentation results.
             </p>
         </div>
       </center>
