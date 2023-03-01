@@ -1,1 +1,1 @@
-dog
+const load_text = "dog";
