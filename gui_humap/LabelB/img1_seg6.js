@@ -1,1 +1,1 @@
-const load_text = "car";
+const load_textB = "car";
